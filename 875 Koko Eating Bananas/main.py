@@ -10,7 +10,7 @@ Return the minimum integer k such that she can eat all the bananas within h hour
 import math
 
 
-def minEatingSpeed(piles: list[int], h: int) -> int:
+def min_eating_speed(piles: list[int], h: int) -> int:
     if len(piles) >= h:
         return max(piles)
     elif len(piles) == 1:
@@ -29,11 +29,11 @@ def minEatingSpeed(piles: list[int], h: int) -> int:
             speed += 1
 
 
-r1 = minEatingSpeed(piles=[3, 6, 7, 11], h=8)
-r2 = minEatingSpeed(piles=[30, 11, 23, 4, 20], h=5)
-r3 = minEatingSpeed(piles=[30, 11, 23, 4, 20], h=6)
-r4 = minEatingSpeed(piles=[312884470], h=312884469)
-r5 = minEatingSpeed(
+r1 = min_eating_speed(piles=[3, 6, 7, 11], h=8)
+r2 = min_eating_speed(piles=[30, 11, 23, 4, 20], h=5)
+r3 = min_eating_speed(piles=[30, 11, 23, 4, 20], h=6)
+r4 = min_eating_speed(piles=[312884470], h=312884469)
+r5 = min_eating_speed(
     piles=[
         332484035,
         524908576,

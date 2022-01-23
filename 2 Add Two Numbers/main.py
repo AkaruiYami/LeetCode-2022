@@ -15,7 +15,7 @@ l1 = ListNode(2, ListNode(4, ListNode(3)))
 l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 
-def addTwoNumbers(l1: l_n, l2: l_n) -> l_n:
+def add_two_numbers(l1: l_n, l2: l_n) -> l_n:
     r = ListNode()
     r_tail = r
     carry = 0
@@ -38,4 +38,4 @@ def addTwoNumbers(l1: l_n, l2: l_n) -> l_n:
         r_tail = r_tail.next
 
 
-r = addTwoNumbers(l1, l2)
+r = add_two_numbers(l1, l2)
