@@ -27,6 +27,19 @@ class Solution:
                 r += d[s[i]]
         return r
 
+    def romanToInt2(self, s: str) -> int:
+        d1 = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
+        d2 = {"CM": 900, "CD": 400, "XC": 90, "XL": 40, "IX": 9, "IV": 4}
+
+        for k, v in d2.items():
+            s = s.replace(k, f"+{v}")
+
+        for k, v in d1.items():
+            s = s.replace(k, f"+{v}")
+
+        return eval(s.strip("+"))
+
 
 a = Solution()
 print(a.romanToInt("MCMXCIV"))
+print(a.romanToInt2("MCMXCIV"))
